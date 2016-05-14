@@ -79,6 +79,8 @@
     };
 
     //-----custom functions-----
+    if ( $("#select_type").val() != "")
+      self.whereClause += " AND 'type' = '" + $("#select_type").val() + "'";
     //-----end of custom functions-----
 
     MapsLib.prototype.submitSearch = function (whereClause, map) {
