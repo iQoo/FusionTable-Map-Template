@@ -74,20 +74,6 @@ var myMap = new MapsLib({
 });
 ```
 
-| Option           | Default value           | Notes                                                                                                                                                         |
-|------------------|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| fusionTableId    |                         | **Required**. Table ID of your Fusion Table (found under File => About).                                                                                      |
-| googleApiKey     |                         | **Required**. Found at https://console.developers.google.com/ The key provided in this template is for demonstration purposes only. Please register your own. |
-| map_centroid     |                         | **Required**. Center [latitude, longitude] that your map defaults to.                                                                                         |
-| recordName       | record                  | Used for showing the count of results.                                                                                                                        |
-| recordNamePlural | records                 |                                                                                                                                                               |
-| searchRadius     | 805                     | Default search radius. Defined in meters. Default is 1/2 mile.                                                                                                |
-| locationColumn   | geometry                | Name of the location column in your Fusion Table. If your location column name has spaces in it, surround it with single quotes like this "'my location'".    |
-| locationScope    |                  | Appended to all address searches to keep results within a geographic area.                                                                                    |
-| defaultZoom      | 11                      | Default zoom level when map is loaded (bigger is more zoomed in).                                                                                             |
-| addrMarkerImage  | images/blue-pushpin.png | Image used to identify your address search on the map. Setting it to blank (`""`) will hide the marker.                                                              |
-
-
 ## Custom Filters and Views
 
 Take a look at the [wiki](https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples) to see how to add your own custom filters and views like:
