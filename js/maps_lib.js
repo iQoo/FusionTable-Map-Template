@@ -165,6 +165,13 @@
         //-----custom filters-----
         if ( $("#Age_Served").val() != "")
       self.whereClause += " AND 'type' = '" + $("#Age_Served").val() + "'";
+      
+      
+      var type_column = "'Age_Served'";
+var searchType = type_column + " IN (-1,";
+if ( $("#cbType1").is(':checked')) searchType += "1,";
+if ( $("#cbType2").is(':checked')) searchType += "2,";
+self.whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
         //-----end of custom filters-----
 
         self.getgeoCondition(address, function (geoCondition) {
