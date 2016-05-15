@@ -163,6 +163,8 @@
         self.whereClause = self.locationColumn + " not equal to ''";
         
         //-----custom filters-----
+        if ( $("#Age_Served").val() != "")
+      self.whereClause += " AND 'type' = '" + $("#Age_Served").val() + "'";
         //-----end of custom filters-----
 
         self.getgeoCondition(address, function (geoCondition) {
