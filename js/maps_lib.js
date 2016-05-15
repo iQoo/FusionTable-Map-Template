@@ -79,14 +79,9 @@
     };
 
     //-----custom functions-----
-    if ( $("#select_type").val() != "")
+      if ( $("#select_type").val() != "")
       self.whereClause += " AND 'type' = '" + $("#select_type").val() + "'";
       
-    var type_column = "'Ages Served'";
-    var searchType = type_column + " IN (-1,";
-     if ( $("#cbType1").is(':checked')) searchType += "1,";
-     if ( $("#cbType2").is(':checked')) searchType += "2,";
-     self.whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";  
       
     //-----end of custom functions-----
 
