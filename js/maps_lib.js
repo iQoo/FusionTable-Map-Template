@@ -79,8 +79,8 @@
     };
 
     //-----custom functions-----
-    if ( $("'Service Type'").val() != "")
-      self.whereClause += " AND 'type' = '" + $("'Service Type'").val() + "'";
+    if ( $("#'Service Type'").val() != "")
+      self.whereClause += " AND 'type' = '" + $("#'Service Type'").val() + "'";
       
       
      
