@@ -6,6 +6,17 @@ You want to put your data on a searchable, filterable map. This is a free, open 
 [See the working demo &raquo;](http://iQoo.github.io/FusionTable-Map-Template/)
 
 
+```javascript
+var myMap = new MapsLib({
+  fusionTableId:      "1PPVZCySAkpeU4kHt4K_4zHUtNHNqighHRJO2IRfj",
+  googleApiKey:       "AIzaSyCMSEYfLd7JWH2P8vG78XfEHWwDyp6nlEM",
+  locationColumn:     "geometry",
+  map_center:         [40.597614, -74.074905],
+  locationScope:      "Staten Island"
+});
+```
+
+
 ## Contributors 
 
 * [Derek Eder](http://derekeder.com) - primary contributor
