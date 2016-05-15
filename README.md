@@ -66,11 +66,11 @@ You can configure your map by passing in a dictionary of options when you create
 
 ```javascript
 var myMap = new MapsLib({
-  fusionTableId:      "1m4Ez9xyTGfY2CU6O-UgEcPzlS0rnzLU93e4Faa0",
-  googleApiKey:       "AIzaSyA3FQFrNr5W2OEVmuENqhb2MBB2JabdaOY",
+  fusionTableId:      "1PPVZCySAkpeU4kHt4K_4zHUtNHNqighHRJO2IRfj",
+  googleApiKey:       "AIzaSyCMSEYfLd7JWH2P8vG78XfEHWwDyp6nlEM",
   locationColumn:     "geometry",
-  map_center:         [41.8781136, -87.66677856445312],
-  locationScope:      "chicago"
+  map_center:         [40.597614, -74.074905],
+  locationScope:      "Staten Island"
 });
 ```
 
@@ -187,46 +187,6 @@ When you create custom styles for the first time, the styleId will be 2. For cus
      templateId: 2
    });
 ```
-
-For reference, styleId 1 is the default look - usually small red dots or red polygons. templateId 1 is the default info window that just shows the first few columns in your table.
-
-For more information, see [Working with styles](https://developers.google.com/fusiontables/docs/v1/using#WorkingStyles) and [Working with templates](https://developers.google.com/fusiontables/docs/v1/using#WorkingInfoWindows) in the Fusion Tables documentation.
-
-#### I want to display custom icons on my map
-
-By default, Fusion Tables only provides 10 (5 large and 5 small) marker icons. 
-
-<img src="http://storage.googleapis.com/support-kms-prod/SNP_2752125_en_v0" alt="small red map dot" title="small red map dot" width="9" height="9">&nbsp;<img src="http://storage.googleapis.com/support-kms-prod/SNP_2752063_en_v0" alt="small yellow map dot" title="small yellow map dot" width="9" height="9">&nbsp;<img src="http://storage.googleapis.com/support-kms-prod/SNP_2752129_en_v0" alt="small green map dot" title="small green map dot" width="9" height="9">&nbsp;<img src="http://storage.googleapis.com/support-kms-prod/SNP_2752068_en_v0" alt="small blue map dot" title="small blue map dot" width="9" height="9">&nbsp;<img src="http://storage.googleapis.com/support-kms-prod/SNP_2752264_en_v0" alt="small purple map dot" title="small purple map dot" width="9" height="9">&nbsp;<img alt="large_red" src="http://chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|FF0000">&nbsp;<img alt="large_yellow" src="http://chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|FFFF00">&nbsp;<img alt="large_green" src="http://chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|00FF00">&nbsp;<img alt="large_blue" src="http://chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|6699FF">&nbsp;<img alt="large_purple" src="http://chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|9933FF">
-
-From my understanding, this is for performance reasons (the map and icon tiles are cached). However, there are two ways to work around it:
-
-1. Use some of the 200 additional icons provided by Google. [This page](http://support.google.com/fusiontables/answer/2679986?hl=en) gives a good tutorial.
-1. Use the Fusion Tables API to fetch your data and then draw your own markers using the Google Maps v3 API. Take a look at [this example](https://code.google.com/p/gmaps-samples/source/browse/trunk/fusiontables/custom_markers.html?spec=svn2515&r=2515) (warning: more advanced programming ahead!)
-
-#### My map works, but the results count returns 0
-
-The results counter uses the Fusion Tables API, which requires an API key and some specific sharing permissions. Try the following in this order:
-
-1. Make sure you set fusionTableId to a valid API key. It should look something like `1m4Ez9xyTGfY2CU6O-UgEcPzlS0rnzLU93e4Faa0`. To get a new one, go to the [Google API Console](https://code.google.com/apis/console/)
-1. Make sure that 'Allow Downloads' is checked for your Fusion Table (File => About this table => Edit table information)
-
-#### Still can't figure it out or more detail needed?
-Ask for help on our [Fusion Table Map Template Google Group](https://groups.google.com/forum/#!forum/fusion-table-map-template)!
-
-## Bug fixes and pull requests
-
-Notice a bug or want to add a feature? [Open an issue](https://github.com/derekeder/FusionTable-Map-Template/issues) or submit a pull request like so:
- 
-1. Fork the project.
-1. Make your feature addition or bug fix.
-1. Commit and send me a pull request.
-
-## Contributors 
-
-* [Derek Eder](http://derekeder.com) - primary contributor
-* [Chris Keller](http://www.chrislkeller.com/) - [recenter map on resize](https://github.com/derekeder/FusionTable-Map-Template/pull/11)
-* [nb-ofs](https://github.com/nb-ofs) - [Windows 8 touch screen ability](https://github.com/derekeder/FusionTable-Map-Template/pull/14), [Google Maps Visual Refresh](https://github.com/derekeder/FusionTable-Map-Template/pull/18), [Noscript message](https://github.com/derekeder/FusionTable-Map-Template/pull/19)
-* [Felipe Figueroa](https://github.com/amenadiel) - [Geocomplete update](https://github.com/derekeder/FusionTable-Map-Template/pull/36), [Updates to query function](https://github.com/derekeder/FusionTable-Map-Template/pull/38), [maps_lib.js javascript class](https://github.com/derekeder/FusionTable-Map-Template/pull/45)
 
 ## Copyright and attribution
 
