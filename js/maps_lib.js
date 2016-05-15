@@ -79,8 +79,9 @@
     };
 
     //-----custom functions-----
-    if ( $("#'Service Type'").val() != "")
-      self.whereClause += " AND 'type' = '" + $("#'Service Type'").val() + "'";
+     //-----Drop down for Service Type-----
+    if ( $("'Service Type'").val() != "")
+      self.whereClause += " AND 'type' = '" + $("'Service Type'").val() + "'";
       
       
      
