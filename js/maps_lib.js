@@ -171,6 +171,7 @@
 var searchType = type_column + " IN (-1,";
 if ( $("#cbType1").is(':checked')) searchType += "1,";
 if ( $("#cbType2").is(':checked')) searchType += "2,";
+if ( $("#cbType2").is(':checked')) searchType += "3,";
 self.whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
         //-----end of custom filters-----
 
